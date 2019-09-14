@@ -1,7 +1,7 @@
 <div class="wrapper">
   <div class=" a">
-    <ul class="list-group ">
-      <li *ngFor="let post of posts" class="list-group-item person">
+    <ul class="list-group  ">
+      <li *ngFor="let post of posts | filter : searchText" class="list-group-item person">
         <div class="row cell vdivide">
           <div class="col-3">
             {{ post.name }}
@@ -60,10 +60,11 @@
       </div>
 
       <div class="col-12 justify-content-center align-items-center">
-        <input type="text" id="inputSearch" name="fname" placeholder="Search">
+        <input type="text" [(ngModel)]="searchText" (input)="tcode=$event.target.value" id="inputSearch" name="fname" placeholder="Search">
       </div>
       <div class="col-12 justify-content-center align-items-center">
-        <button class="button" onclick="filtrar()">SEND</button>
+        <!--<button class="button" onclick="filtrar()">SEND</button>-->
+        <input type="button" value="Click" (click) = "filtrar()">
       </div>
     </div>
   </div>

@@ -9,6 +9,8 @@ import { WishlistComponent } from './wishlist/wishlist.component';
 import { SettingsComponent } from './settings/settings.component';
 import { MyAccountComponent } from './my-account/my-account.component';
 import { HttpModule } from "@angular/http"; 
+import { FormsModule } from '@angular/forms';
+import { FilterPipe }from './pipes/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -17,13 +19,15 @@ import { HttpModule } from "@angular/http";
     MessagesComponent,
     WishlistComponent,
     SettingsComponent,
-    MyAccountComponent
+    MyAccountComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule, 
-    HttpModule
+    HttpModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
