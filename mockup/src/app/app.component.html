@@ -1,31 +1,31 @@
 <div class="wrapper">
-    <div class="a ">
+    <div class="navBar">
         <div class="topnav" id="myTopnav">
             <a href="home" class="nav-link" routerLink="home" routerLinkActive="active">
                 <i class="fa fa-home" aria-hidden="true"></i>
-              Home</a>
+                Home</a>
             <a href="news" class="nav-link" routerLink="messages" routerLinkActive="active">
                 <i class="fa fa-envelope" aria-hidden="true"></i>
                 Messages</a>
-            <a href="contact"class="nav-link" routerLink="wishlist" routerLinkActive="active" >
+            <a href="contact" class="nav-link" routerLink="wishlist" routerLinkActive="active">
                 <i class="fa fa-star" aria-hidden="true"></i>
                 Wishlist</a>
-            <a href="#about" class="nav-link" routerLink="settings" routerLinkActive="active" >
+            <a href="#about" class="nav-link" routerLink="settings" routerLinkActive="active">
                 <i class="fa fa-cog" aria-hidden="true"></i>
                 Settings</a>
-            <a href="#about" class="nav-link" routerLink="myaccount" routerLinkActive="active" >
+            <a href="#about" class="nav-link" routerLink="myaccount" routerLinkActive="active">
                 <i class="fa fa-user" aria-hidden="true"></i>
                 My account</a>
             <a href="javascript:void(0);" class="icon" (click)="myFunction()">
-              <i class="fa fa-bars"></i>
+                <i class="fa fa-bars"></i>
             </a>
-          </div>
+        </div>
     </div>
-    <div class="b appbackground">
-        <img src= "./assets/imagenes/logo.png" id="logo">
-        
+    <div class="logo appbackground">
+        <img src="./assets/imagenes/logo.png" id="logo">
+
     </div>
-    <div class="c appbackground">
-            <router-outlet></router-outlet>
+    <div class="appContainer appbackground">
+        <router-outlet></router-outlet>
     </div>
-  </div>
+</div>

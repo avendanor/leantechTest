@@ -1,31 +1,30 @@
 <div class="wrapper">
-  <div class=" a">
+  <div class="containers">
     <ul class="list-group  ">
-      <li *ngFor="let post of posts | filter : searchText" class="list-group-item person">
-        <div class="row cell vdivide">
+      <li *ngFor="let post of characters | filter : searchText" class="list-group-item person">
+        <div class="row cell vdivide center">
           <div class="col-3">
-            {{ post.name }}
-            <br>
-            {{ post.email }}
-            <br>
-            {{ post.address.city}}
+            {{post[0]}}
           </div>
-          <div class="col-4">
-            <p>Work on: {{ post.company.name }}</p>
-            <img src="https://www.pngkey.com/png/full/34-342433_flecha-chevron-hacia-abajo-flecha-hacia-abajo-png.png" class="flecha">
-            <p>Work whit: {{ post.company.bs}}</p>
+          <div class="col-4 ">
+            {{post[1]}}
+            <br>
+            <img src="https://www.pngkey.com/png/full/34-342433_flecha-chevron-hacia-abajo-flecha-hacia-abajo-png.png"
+              width="25px" height="auto">
+            <br>
+            {{post[2]}}
           </div>
           <div class="col-5">
-
+            {{post[3]}}
           </div>
         </div>
       </li>
     </ul>
   </div>
-  <div class="b">
+  <div class="filters">
     <div class="container">
       <div class="row d-flex justify-content-center align-items-center">
-        <img src="https://cdn.pixabay.com/photo/2017/10/10/07/01/focus-2836211_960_720.png" id="foco">
+        <img src="https://cdn.pixabay.com/photo/2017/10/10/07/01/focus-2836211_960_720.png" id="lightBulb">
         <p class="secondPart">Smart Filters</p>
       </div>
     </div>
@@ -56,15 +55,15 @@
     <hr>
     <div class="container">
       <div class="col-12 justify-content-center align-items-center">
-        <p class="secondPart">Status</p>
+        <p class="secondPart">Filter by date:</p>
       </div>
-
       <div class="col-12 justify-content-center align-items-center">
-        <input type="text" [(ngModel)]="searchText" (input)="tcode=$event.target.value" id="inputSearch" name="fname" placeholder="Search">
+        <input type="text" [(ngModel)]="searchText" (input)="tcode=$event.target.value" id="inputSearch" name="fname"
+          placeholder="Search">
       </div>
       <div class="col-12 justify-content-center align-items-center">
         <!--<button class="button" onclick="filtrar()">SEND</button>-->
-        <input type="button" value="Click" (click) = "filtrar()">
+        <input type="button" value="DELIVERED" (click)="filtrar()" class=button>
       </div>
     </div>
   </div>

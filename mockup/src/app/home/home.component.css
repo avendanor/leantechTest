@@ -1,4 +1,10 @@
-
+/*tamaño del foco al lado de smartFilters*/
+ #lightBulb{
+  margin-bottom: 17px;
+  height: 14px;
+  width: 14px;
+}
+/*imagenes de la izquierda*/
  .leftImages{
   width:50px;
   height:50px;
@@ -6,6 +12,7 @@
   margin-top: 10px;
   margin-bottom: 10px;
 }
+/*Configuracion switch de la izqueirda*/
 .switch {
   position: relative;
   display: inline-block;
@@ -13,13 +20,11 @@
   height: 34px;
   margin-left: 35px;
 }
-
 .switch input { 
   opacity: 0;
   width: 0;
   height: 0;
 }
-
 .slider {
   position: absolute;
   cursor: pointer;
@@ -31,7 +36,6 @@
   -webkit-transition: .4s;
   transition: .4s;
 }
-
 .slider:before {
   position: absolute;
   content: "";
@@ -43,33 +47,28 @@
   -webkit-transition: .4s;
   transition: .4s;
 }
-
 input:checked + .slider {
   background-color: #2196F3;
 }
-
 input:focus + .slider {
   box-shadow: 0 0 1px #2196F3;
 }
-
 input:checked + .slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
 }
-
-/* Rounded sliders */
 .slider.round {
   border-radius: 34px;
 }
-
 .slider.round:before {
   border-radius: 50%;
 }
+/*diseño boton*/
 .button {
   margin-top: 10px;
   width: 100%;
-  background-color: rgb(63, 96, 112); /* Green */
+  background-color: rgb(63, 96, 112);
   color: white;
   text-align: center;
   text-decoration: none;
@@ -77,61 +76,53 @@ input:checked + .slider:before {
   cursor: pointer;
 }
 
-.button:not(:last-child) {
-  border-right: none; /* Prevent double borders */
-}
-
 .button:hover {
   background-color: rgb(26, 57, 71);
 }
-#foco{
-    margin-bottom: 17px;
-    height: 14px;
-    width: 14px;
+
+/*diseño del grid*/
+.wrapper {
+  min-height: 100%;
+  display: grid;
+  grid-gap: 7px;
+  grid-template-columns: [col1-start] 200px  [col2-start];
+  grid-template-rows: [row1-start] 100px [row2-start] auto [row2-end];
+  color: #444;
 }
-  
-  .wrapper {
-          min-height: 100%;
-          display: grid;
-          grid-gap: 7px;
-          grid-template-columns: [col1-start] 200px  [col2-start];
-          grid-template-rows: [row1-start] 100px [row2-start] auto [row2-end];
-          color: #444;
-      }
-  
-      .a {
-          grid-column: col2-start / col3-end;
-          grid-row: row1-start / end;
-      }
-      .b {
-          grid-column: col1-start ;
-          grid-row: row1-start / end;
-      }
-      .person{
-          border-radius: 30px;
-          background-color: #ffffff; /* Add a grey background color */
-          margin-bottom: 15px;
-      }
-      .cell{
-        height: 100%;
-        font-size: 100%;
-        word-wrap: break-word;
-      }
-      .row.vdivide [class*='col-']:not(:last-child):after {
-        background: #e0e0e0;
-        width: 1px;
-        content: "";
-        display:block;
-        position: absolute;
-        top:0;
-        bottom: 0;
-        right: 0;
-        min-height: 70px;
-      }
-      .flecha{
-        height:20px; 
-        display:block;
-        width:auto; 
-        margin-left:auto;
-        margin-right: auto;
-      }
+
+/*zona de publicaciones*/
+.containers {
+    grid-column: col2-start / col3-end;
+    grid-row: row1-start / end;
+}
+/*zona de filtros*/
+.filters {
+    grid-column: col1-start ;
+    grid-row: row1-start / end;
+}
+/*diseño de las publicaciones*/
+.person{
+    border-radius: 30px;
+    background-color: #ffffff; 
+    margin-bottom: 15px;
+}
+.cell{
+  height: 100%;
+  font-size: 100%;
+  word-wrap: break-word;
+}
+/*lineas que dividen las publicaiones*/
+.row.vdivide [class*='col-']:not(:last-child):after {
+  background: #e0e0e0;
+  width: 1px;
+  content: "";
+  display:block;
+  position: absolute;
+  top:0;
+  bottom: 0;
+  right: 0;
+  min-height: 70px;
+}
+.center{
+  text-align: center;
+}
