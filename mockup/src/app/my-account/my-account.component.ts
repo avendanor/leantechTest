@@ -7,8 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MyAccountComponent implements OnInit {
 
-  constructor() { }
-
+  constructor() { 
+    
+  }
+  myFunction() {
+    var txt="holi";
+    var person = prompt("Please enter your name:", "Harry Potter");
+    if (person == null || person == "") {
+      txt = "User cancelled the prompt.";
+    } else {
+      txt = person;
+    }
+    document.getElementById("demo").innerHTML = txt;
+  }
   ngOnInit() {
   }
 

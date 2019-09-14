@@ -1,1 +1,19 @@
-<p>wishlist works!</p>
+<li *ngFor="let post of characters | filter : searchText" class="list-group-item person">
+    <div class="row cell vdivide center">
+        <div class="col-3">
+            <input type="button" class="circle-button circle-xlarge circle-circle circle-black" value="-" (click)="eliminar(post[4])">
+            {{post[0]}}
+        </div>
+        <div class="col-4 ">
+            {{post[1]}}
+            <br>
+            <img src="https://www.pngkey.com/png/full/34-342433_flecha-chevron-hacia-abajo-flecha-hacia-abajo-png.png"
+                width="25px" height="auto">
+            <br>
+            {{post[2]}}
+        </div>
+        <div class="col-5">
+            {{post[3]}}
+        </div>
+    </div>
+</li>

@@ -126,3 +126,12 @@ input:checked + .slider:before {
 .center{
   text-align: center;
 }
+
+.circle-button{
+  height: 40px;
+  width: 40px;
+}
+.circle-circle{border-radius:50%}
+.circle-black,.circle-hover-black:hover{color:#fff!important;background-color:rgb(255, 153, 0)!important}
+.circle-button:hover{color:#000!important;background-color:#ccc!important}
+

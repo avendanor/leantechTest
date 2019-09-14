@@ -1,9 +1,10 @@
 <div class="wrapper">
   <div class="containers">
-    <ul class="list-group  ">
+    <ul class="list-group">
       <li *ngFor="let post of characters | filter : searchText" class="list-group-item person">
-        <div class="row cell vdivide center">
+          <div class="row cell vdivide center">
           <div class="col-3">
+              <button class="circle-button circle-xlarge circle-circle circle-black">+</button>
             {{post[0]}}
           </div>
           <div class="col-4 ">
