@@ -21,10 +21,10 @@ En consola:
         npm cache clean --force
 - #### Clonar repositorio:
 
-        git clone 
+        git clone https://github.com/avendanor/leantechTest.git
 - #### Ir a la carpeta:
 
-        cd leantechTest/
+        cd leantechTest/mockup
 - #### Ejecutar codigo
 
         ng serve
