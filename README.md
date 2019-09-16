@@ -25,6 +25,9 @@ En consola:
 - #### Ir a la carpeta:
 
         cd leantechTest/mockup
+- #### Instalar modulos para el proyecto:
+
+        npm install
 - #### Ejecutar codigo
 
         ng serve
